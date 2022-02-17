@@ -14,4 +14,4 @@ RUN apt-get update && \
 
 COPY ./php.ini /usr/local/etc/php/php.ini
 
-WORKDIR /workcomposer create-project --prefer-dist "laravel/laravel=8.*" .
+WORKDIR /work
