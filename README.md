@@ -18,7 +18,7 @@ docker-laravel-handson (*1)
 │       ├── Dockerfile
 │       └── php.ini
 ├── docker-compose.yml (*2)
-└── backend (*1)
+└── origin-project (*1)
     └── Laravelをインストールするディレクトリ
 (*1) 任意のプロジェクト名に変更すること
 (*2) appとwebのvolumesのパス指定をプロジェクト名に合わせて変更すること
