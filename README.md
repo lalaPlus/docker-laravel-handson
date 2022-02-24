@@ -32,9 +32,12 @@ cd ./sample
 rm -rf .git
 git init
 ```
-- 適当なプロジェクト名(origin-project)にLaravelをインストール
+- 適当なプロジェクト名(origin-project)にLaravelをインストール。
 ```bash
 # docker-プロジェクトルートにて
+
+# gitの都合上配置してある.gitkeepを消す
+rm ./origin-project/.gitkeep
 composer create-project --prefer-dist "laravel/laravel={Laravelのバージョン番号を指定}" ./origin-project
 ```
 以下のようにvalumesにてマウントの関係性を指定する。これならappコンテナ側に入ってLaravelをインストールしなくても大丈夫なはず。
