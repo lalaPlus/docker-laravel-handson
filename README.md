@@ -4,9 +4,11 @@ Docker環境でLaravelを動かす想定の自分用の雛形。
 
 参考: [【超入門】20分でLaravel開発環境を爆速構築するDockerハンズオン](https://qiita.com/ucan-lab/items/56c9dc3cf2e6762672f4)
 
-## ディレクトリ構造
+## 使い方
+
+- サンプルディレクトリ構造
 ```
-docker-laravel-handson(適当なものにリネーム)
+docker-sample(適当にリネームしてよし)
 ├── README.md
 ├── infra
 │   ├── mysql
@@ -18,23 +20,22 @@ docker-laravel-handson(適当なものにリネーム)
 │       ├── Dockerfile
 │       └── php.ini
 ├── docker-compose.yml (*1)
-└── origin-project (Laravelをインストールする空ディレクトリ(適当なものにリネーム))
+└── origin-project(適当にリネームしてよし)
 (*1) appとwebのvolumesのパス指定をプロジェクト名に合わせて変更すること(マウント指定)
 (*2) .gitignoreで除外すること
 ```
 **\*/infra/mysql/Dockerfileは.gitignoreで必ず除外すること(https://docs.github.com/ja/get-started/getting-started-with-git/ignoring-files)**
 
-## 使い方
-- 適当なdocker-プロジェクト名(docker-laravel-handson)でクローン
+- 適当なdocker-プロジェクト名(docker-sample)でクローン
 ```bash
-git clone git@github.com:lalaPlus/docker-laravel-handson.git docker-laravel-handson
-cd ./sample
+git clone git@github.com:lalaPlus/docker-laravel-handson.git ./docker-sample
+cd ./docker-sample
 rm -rf .git
 git init
 ```
 - 適当なプロジェクト名(origin-project)にLaravelをインストール。
 ```bash
-# docker-プロジェクトルートにて
+# docker-sampleルートにて
 
 # gitの都合上配置してある.gitkeepを消す
 rm ./origin-project/.gitkeep
