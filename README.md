@@ -35,7 +35,9 @@ git init
 - 適当なプロジェクト名(origin-project)にLaravelをインストール
 ```bash
 # docker-プロジェクトルートにて
-composer create-project --prefer-dist "laravel/laravel={Laravelのバージョン番号を指定}" ./origin-project
+mkdir origin-project
+cd ./origin-project
+composer create-project --prefer-dist "laravel/laravel={Laravelのバージョン番号を指定}" .
 ```
 以下のようにvalumesにてマウントの関係性を指定する。これならappコンテナ側に入ってLaravelをインストールしなくても大丈夫なはず。
 ```yml
@@ -64,7 +66,7 @@ volumes:
   db-store:
 ```
 
-- コンテナのビルド＆起動
+- Dockerコンテナイメージのビルド＆起動
 ```bash
 docker compose up -d
 ```
