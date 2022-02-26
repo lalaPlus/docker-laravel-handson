@@ -70,7 +70,7 @@ volumes:
 
 - Dockerコンテナイメージのビルド＆起動
 ```bash
-docker compose up -d
+docker compose up -d --build
 ```
 
 以下を開いてLaravelが表示されればとりあえずおk <br />
